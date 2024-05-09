@@ -1,3 +1,10 @@
+## 16-3.2.13 2024-05-09 <dave at tiredofit dot ca>
+
+   ### Added
+      - Postgresql 16.3
+      - Postgresql Zabbix Plugin 6.4.13
+
+
 ## 16-3.2.12 2024-02-06 <dave at tiredofit dot ca>
 
    ### Added
