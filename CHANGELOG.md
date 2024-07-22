@@ -1,3 +1,9 @@
+## 16-3.2.15 2024-07-22 <dave at tiredofit dot ca>
+
+   ### Added
+      - Add Zabbix Postgresql Agent 7.0.1
+
+
 ## 16-3.2.14 2024-07-05 <dave at tiredofit dot ca>
 
    ### Changed
