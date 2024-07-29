@@ -1,3 +1,10 @@
+## 16-3.2.16 2024-07-29 <dave at tiredofit dot ca>
+
+   ### Added
+      - Zabbix Postgres plugin 7.0.2
+      - Alpine 3.20.0 base
+
+
 ## 16-3.2.15 2024-07-22 <dave at tiredofit dot ca>
 
    ### Added

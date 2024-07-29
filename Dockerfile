@@ -1,5 +1,5 @@
 ARG DISTRO="alpine"
-ARG DISTRO_VARIANT="3.19"
+ARG DISTRO_VARIANT="3.20"
 
 FROM docker.io/tiredofit/${DISTRO}:${DISTRO_VARIANT}
 LABEL maintainer="Dave Conroy (github.com/tiredofit)"
@@ -7,7 +7,7 @@ LABEL maintainer="Dave Conroy (github.com/tiredofit)"
 ARG POSTGRES_VERSION
 ARG POSTGRES_ZABBIX_PLUGIN_VERSION
 ENV POSTGRES_VERSION=${POSTGRES_VERSION:-"16.3"} \
-    POSTGRES_ZABBIX_PLUGIN_VERSION=${POSTGRES_ZABBIX_PLUGIN_VERSION:-"7.0.1"} \
+    POSTGRES_ZABBIX_PLUGIN_VERSION=${POSTGRES_ZABBIX_PLUGIN_VERSION:-"7.0.2"} \
     CONTAINER_ENABLE_MESSAGING=FALSE \
     IMAGE_NAME="tiredofit/postgres" \
     IMAGE_REPO_URL="https://github.com/tiredofit/docker-postgres/"
