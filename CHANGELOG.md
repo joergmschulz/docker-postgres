@@ -1,3 +1,10 @@
+## 16-3.2.17 2024-09-25 <dave at tiredofit dot ca>
+
+   ### Added
+      - Postgresql 16.4
+      - Zabbix Postgresql Module 7.0.4
+
+
 ## 16-3.2.16 2024-07-29 <dave at tiredofit dot ca>
 
    ### Added
