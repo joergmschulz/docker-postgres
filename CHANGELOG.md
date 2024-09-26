@@ -1,3 +1,10 @@
+## 17-3.2.18 2024-09-26 <dave at tiredofit dot ca>
+
+   ### Added
+      - Postgresql 17.0.0
+      - Pin to tiredofit/alpine:7.10.4
+
+
 ## 16-3.2.17 2024-09-25 <dave at tiredofit dot ca>
 
    ### Added
