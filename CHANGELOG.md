@@ -1,3 +1,10 @@
+## 17-3.2.19 2024-12-05 <dave at tiredofit dot ca>
+
+   ### Added
+      - Postgresql 17.2
+      - Postgres Zabbix Agent 7.0.5
+
+
 ## 17-3.2.18 2024-09-26 <dave at tiredofit dot ca>
 
    ### Added
