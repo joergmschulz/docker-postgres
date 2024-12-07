@@ -1,3 +1,12 @@
+## 17-3.2.20 2024-12-07 <dave at tiredofit dot ca>
+
+   ### Added
+      - Clang and LLVM 18
+
+   ### Changed
+      - Fix Build
+
+
 ## 17-3.2.19 2024-12-05 <dave at tiredofit dot ca>
 
    ### Added

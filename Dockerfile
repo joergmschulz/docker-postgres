@@ -23,7 +23,7 @@ RUN source /assets/functions/00-container && \
     package upgrade && \
     package install .postgres-build-deps \
                     bison \
-                    clang15 \
+                    clang18 \
                     coreutils \
                     dpkg-dev \
                     dpkg \
@@ -36,7 +36,7 @@ RUN source /assets/functions/00-container && \
                     libxml2-dev \
                     libxslt-dev \
                     linux-headers \
-                    llvm15-dev \
+                    llvm18-dev \
                     lz4-dev \
                     make \
                     openldap-dev \
@@ -54,7 +54,7 @@ RUN source /assets/functions/00-container && \
    package install .postgres-run-deps \
                     icu-data-full \
                     libpq-dev \
-                    llvm15 \
+                    llvm18 \
                     musl-locales \
                     openssl \
                     zstd-libs \
@@ -80,8 +80,8 @@ RUN source /assets/functions/00-container && \
    mv src/include/pg_config_manual.h.new src/include/pg_config_manual.h && \
    wget -O config/config.guess 'https://git.savannah.gnu.org/cgit/config.git/plain/config.guess?id=7d3d27baf8107b630586c962c057e22149653deb' && \
    wget -O config/config.sub 'https://git.savannah.gnu.org/cgit/config.git/plain/config.sub?id=7d3d27baf8107b630586c962c057e22149653deb' && \
-   export LLVM_CONFIG="/usr/lib/llvm15/bin/llvm-config" && \
-   export CLANG=clang-15  && \
+   export LLVM_CONFIG="/usr/lib/llvm18/bin/llvm-config" && \
+   export CLANG=clang-18  && \
    ./configure \
         --build="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)" \
         --prefix=/usr/local \
@@ -107,8 +107,8 @@ RUN source /assets/functions/00-container && \
         --with-uuid=e2fs \
         --with-zstd \
         && \
-    make -j "$(nproc)" world && \
-    make install-world && \
+    make -j "$(nproc)" world-bin && \
+    make install-world-bin && \
     make -j "$(nproc)" -C contrib && \
     make -C contrib/ install && \
     runDeps="$( \
