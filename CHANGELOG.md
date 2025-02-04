@@ -1,3 +1,11 @@
+## 15-3.2.8 2025-02-04 <dave at tiredofit dot ca>
+
+   ### Added
+      - Pin to tiredofit/alpine:3.21:7.10.28
+      - Zabbix Postgres Plugin 7.0.8
+      - Postgresql 15.10
+
+
 ## 15-3.2.7 2023-11-15 <dave at tiredofit dot ca>
 
    ### Changed

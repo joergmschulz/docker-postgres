@@ -1,13 +1,13 @@
 ARG DISTRO="alpine"
-ARG DISTRO_VARIANT="3.18"
+ARG DISTRO_VARIANT="3.21-7.10.28"
 
 FROM docker.io/tiredofit/${DISTRO}:${DISTRO_VARIANT}
 LABEL maintainer="Dave Conroy (github.com/tiredofit)"
 
 ARG POSTGRES_VERSION
 ARG POSTGRES_ZABBIX_PLUGIN_VERSION
-ENV POSTGRES_VERSION=${POSTGRES_VERSION:-"15.5"} \
-    POSTGRES_ZABBIX_PLUGIN_VERSION=${POSTGRES_ZABBIX_PLUGIN_VERSION:-"6.4.8"} \
+ENV POSTGRES_VERSION=${POSTGRES_VERSION:-"15.10"} \
+    POSTGRES_ZABBIX_PLUGIN_VERSION=${POSTGRES_ZABBIX_PLUGIN_VERSION:-"7.0.8"} \
     CONTAINER_ENABLE_MESSAGING=FALSE \
     IMAGE_NAME="tiredofit/postgres" \
     IMAGE_REPO_URL="https://github.com/tiredofit/docker-postgres/"
@@ -91,21 +91,21 @@ RUN source /assets/functions/00-container && \
         --with-pgport=5432 \
         --disable-rpath \
         --enable-integer-datetimes \
-	--enable-thread-safety \
-	--enable-tap-tests \
-	--with-gnu-ld \
+        --enable-thread-safety \
+        --enable-tap-tests \
+        --with-gnu-ld \
         --with-icu \
-	--with-ldap \
-	--with-libxml \
-	--with-libxslt \
+        --with-ldap \
+        --with-libxml \
+        --with-libxslt \
         --with-llvm \
-	--with-lz4 \
-	--with-openssl \
+        --with-lz4 \
+        --with-openssl \
         --with-perl \
-	--with-python \
-	--with-tcl \
-	--with-uuid=e2fs \
-	--with-zstd \
+        --with-python \
+        --with-tcl \
+        --with-uuid=e2fs \
+        --with-zstd \
         && \
     make -j "$(nproc)" world && \
     make install-world && \
